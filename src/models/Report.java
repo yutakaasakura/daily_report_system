@@ -36,6 +36,8 @@ import javax.persistence.Table;
 })
 @Entity
 public class Report {
+
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -54,6 +56,9 @@ public class Report {
     @Lob
     @Column(name = "content", nullable = false)
     private String content;
+
+    @Column(name = "meeting", nullable = false)
+    private String meeting;
 
     @Column(name = "created_at", nullable = false)
     private Timestamp created_at;
@@ -101,6 +106,14 @@ public class Report {
         this.content = content;
     }
 
+    public String getMeeting() {
+        return meeting;
+    }
+
+    public void setMeeting(String meeting) {
+        this.meeting = meeting;
+    }
+
     public Timestamp getCreated_at() {
         return created_at;
     }
@@ -116,4 +129,6 @@ public class Report {
     public void setUpdated_at(Timestamp updated_at) {
         this.updated_at = updated_at;
     }
+
+
 }

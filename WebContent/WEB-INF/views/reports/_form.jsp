@@ -26,5 +26,9 @@
 <textarea name="content" rows="10" cols="50">${report.content}</textarea>
 <br /><br />
 
+<label for="meeting">打合せ内容</label><br />
+<input type="text" name="meeting" value="${report.meeting}" />
+<br /><br />
+
 <input type="hidden" name="_token" value="${_token}" />
 <button type="submit">投稿</button>

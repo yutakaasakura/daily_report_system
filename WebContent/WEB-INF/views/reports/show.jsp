@@ -24,6 +24,15 @@
                             </td>
                         </tr>
                         <tr>
+                            <th>打合せ内容</th>
+                            <td><c:out value="${report.meeting}" /></td>
+                        </tr>
+
+
+
+
+
+                        <tr>
                             <th>登録日時</th>
                             <td>
                                 <fmt:formatDate value="${report.created_at}" pattern="yyyy-MM-dd HH:mm:ss" />

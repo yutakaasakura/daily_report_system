@@ -19,6 +19,10 @@ public class ReportValidator {
             errors.add(content_error);
         }
 
+        String meeting_error = _validateContent(r.getMeeting());
+        if(!meeting_error.equals("")) {
+            errors.add(meeting_error);
+        }
         return errors;
     }
 
@@ -34,6 +38,14 @@ public class ReportValidator {
         if(content == null || content.equals("")) {
             return "内容を入力してください。";
             }
+        return "";
+    }
+
+    @SuppressWarnings("unused")
+    private static String _validateMeeting(String meeting) {
+        if(meeting == null || meeting.equals("")) {
+            return "打合せ内容を入力してください。";
+                }
 
         return "";
     }
